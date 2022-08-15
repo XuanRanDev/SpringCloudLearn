@@ -1,0 +1,12 @@
+server:
+  port: 3001
+
+eureka:
+  instance:
+    hostname: localhost # 名称
+  client:
+    register-with-eureka: false # 是否向eureka注册中心注册自己
+    fetch-registry: false # 该属性为false代表自己为注册中心
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
