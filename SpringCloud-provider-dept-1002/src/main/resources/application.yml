@@ -1,0 +1,27 @@
+server:
+  port: 1002
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.103.193.144:3310/springcloud?useUnicode=true&characterEncoding=utf-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+
+
+
+mybatis-plus:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka3001.com:3001/eureka/,http://eureka3002.com:3002/eureka/,http://eureka3003.com:3003/eureka/
+  instance:
+    instance-id: SpringCloud-Dept-provider-1002DuanKou
+
+info:
+  lby: 2018.6.16
+

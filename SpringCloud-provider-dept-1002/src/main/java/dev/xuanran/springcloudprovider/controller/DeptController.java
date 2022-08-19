@@ -31,7 +31,7 @@ public class DeptController {
     public Dept getDeptById(@PathVariable("id") int id) {
         QueryWrapper<Dept> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("id", id);
-        return deptMapper.selectOne(queryWrapper).setDbSource("dept-1001");
+        return deptMapper.selectOne(queryWrapper).setDbSource("dept-1002");
     }
 
     @PostMapping("/addNewDept")

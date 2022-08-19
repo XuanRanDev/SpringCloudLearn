@@ -11,6 +11,8 @@
         <module>SpringCloud-eureka-server-3001</module>
         <module>SpringCloud-eureka-server-3002</module>
         <module>SpringCloud-eureka-server-3003</module>
+        <module>SpringCloud-provider-dept-1002</module>
+        <module>SpringCloud-provider-dept-1003</module>
     </modules>
 
     <parent>
