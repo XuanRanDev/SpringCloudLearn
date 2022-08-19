@@ -3,7 +3,6 @@ package dev.xuanran.springcloudprovider.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import dev.xuanran.springcloudapi.pojo.Dept;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 /**
  * Created by XuanRan on 2022/8/14

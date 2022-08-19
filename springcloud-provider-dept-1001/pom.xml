@@ -9,10 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>SpringCloud-provider-dept-1001</artifactId>
-    <packaging>pom</packaging>
-
-
+    <artifactId>springcloud-provider-dept-1001</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -55,11 +52,6 @@
             <version>3.2.0</version>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.8</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
         </dependency>
@@ -68,5 +60,6 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
+
 
 </project>
