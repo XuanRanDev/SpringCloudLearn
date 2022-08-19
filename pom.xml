@@ -9,6 +9,8 @@
         <module>SpringCloud-provider-dept-1001</module>
         <module>SpringCloud-customer-dept-2001</module>
         <module>SpringCloud-eureka-server-3001</module>
+        <module>SpringCloud-eureka-server-3002</module>
+        <module>SpringCloud-eureka-server-3003</module>
     </modules>
 
     <parent>

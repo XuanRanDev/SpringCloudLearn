@@ -1,12 +1,12 @@
 server:
-  port: 3001
+  port: 3003
 
 eureka:
   instance:
-    hostname: eureka3001.com # 名称
+    hostname: eureka3003.com # 名称
   client:
     register-with-eureka: false # 是否向eureka注册中心注册自己
     fetch-registry: false # 该属性为false代表自己为注册中心
     service-url:
-      defaultZone: http://eureka3002.com:3002/eureka/,http://eureka3003.com:3003/eureka/
+      defaultZone: http://eureka3001.com:3001/eureka/,http://eureka3002.com:3002/eureka/
 
