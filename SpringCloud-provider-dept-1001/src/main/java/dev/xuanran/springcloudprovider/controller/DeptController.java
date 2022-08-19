@@ -28,10 +28,10 @@ public class DeptController {
     }
 
     @GetMapping("/getDeptById/{id}")
-    public R getDeptById(@PathVariable("id") int id) {
+    public Dept getDeptById(@PathVariable("id") int id) {
         QueryWrapper<Dept> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("id", id);
-        return R.ok().data("data", deptMapper.selectOne(queryWrapper));
+        return deptMapper.selectOne(queryWrapper).setDbSource("dept-2001");
     }
 
     @PostMapping("/addNewDept")

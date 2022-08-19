@@ -1,2 +1,13 @@
 server:
   port: 2001
+
+spring:
+  application:
+    name: SpringCloud-customer-dept-2001
+
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka3001.com:3001/eureka/,http://eureka3002.com:3002/eureka/,http://eureka3003.com:3003/eureka/
+
