@@ -5,6 +5,8 @@ import dev.xuanran.springcloudapi.pojo.Dept;
 import dev.xuanran.springcloudapi.util.R;
 import dev.xuanran.springcloudprovider.mapper.DeptMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +19,8 @@ import java.util.List;
 public class DeptController {
     @Autowired
     private DeptMapper deptMapper;
+    @Autowired
+    private DiscoveryClient client;
 
     @GetMapping("/")
     public String hello() {
@@ -27,12 +31,12 @@ public class DeptController {
     public R getDeptById(@PathVariable("id") int id) {
         QueryWrapper<Dept> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("id", id);
-        return R.ok().data("data",deptMapper.selectOne(queryWrapper));
+        return R.ok().data("data", deptMapper.selectOne(queryWrapper));
     }
 
     @PostMapping("/addNewDept")
     public R addNewDept(Dept dept) {
-        if(dept == null) return R.error().setMessage("请传入参数");
+        if (dept == null) return R.error().setMessage("请传入参数");
         deptMapper.insert(dept);
         return R.ok();
     }
@@ -40,5 +44,20 @@ public class DeptController {
     @GetMapping("/getDeptList")
     public List<Dept> getDeptList() {
         return deptMapper.selectList(null);
+    }
+
+
+    @GetMapping("/getClient")
+    public DiscoveryClient getClientList() {
+        List<String> services = client.getServices();
+        System.out.println("client list => " + services);
+
+        List<ServiceInstance> instances = client.getInstances("SPRINGCLOUD-PROVIDER-DEPE-1001");
+
+        for (ServiceInstance instance : instances) {
+            System.out.println(instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri() + "\t");
+        }
+        return this.client;
+
     }
 }

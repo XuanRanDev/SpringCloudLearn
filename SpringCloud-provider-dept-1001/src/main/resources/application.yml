@@ -15,3 +15,12 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mybatis/mapper/*.xml
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:3001/eureka/
+  instance:
+    instance-id: SpringCloud-Dept-provider-1001DuanKou
+info:
+  lby: 2018.6.16
+
