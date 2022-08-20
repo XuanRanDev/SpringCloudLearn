@@ -1,9 +1,9 @@
 server:
-  port: 2001
+  port: 2002
 
 spring:
   application:
-    name: SpringCloud-customer-dept-2001
+    name: SpringCloud-customer-feign-dept-2002
 
 eureka:
   client:
