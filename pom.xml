@@ -15,6 +15,7 @@
         <module>SpringCloud-provider-dept-1003</module>
         <module>springcloud-provider-dept-1001</module>
         <module>SpringCloud-customer-dept-feign-2002</module>
+        <module>SpringCloud-provider-dept-hystrix-1004</module>
     </modules>
 
     <parent>
